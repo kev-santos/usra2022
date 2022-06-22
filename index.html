@@ -8,6 +8,12 @@
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 </head>
 
 <body>
@@ -23,9 +29,21 @@
 	<p>
 		<u> Review: Time complexity of algorithms </u> <br>
 		<small> June 22 </small> <br>
-		time complexity, big-oh notation, small-oh notation
-		
 	</p>
+	<p>
+		Definitions: 
+		<ul>
+			<li>Time complexity of an algorithm: $T:\mathbb{N}\to\mathbb{N}$ where $T(n)$ is the maximum number of steps in any execution of the algorithm on any input of size $n$. </li>
+			<li> The following are all subsets of the set of functions from $\mathbb{N}_k=\{k,k+1,k+2,...\}$ ($k\in\mathbb{N}$) to $\mathbb{R}_0^+$ (nonnegative reals) </li>
+    			<li> $f \in O(g)$ if there exists $c\in\mathbb{R}^+$ and $n_0\in\mathbb{N}$ such that for all $n\geq n_0$, $f(n)\leq c\cdot g(n)$. $g$ is an \textbf{asymptotic upper bound} for $f$. </li>
+    			<li> $f\in\Omega(g)$ if there exists $d\in\mathbb{R}^+$ and $m_0\in\mathbb{N}$ such that for all $n\geq m_0$, $f(n)\geq d\cdot g(n)$. $g$ is an \textbf{asymptotic lower bound} for $f$. </li>
+   			<li> $\Theta(g) = O(g)\cap \Omega(g)$. $f\in\Theta(g)$ means $g$ is an asymptotic tight bound for $f$. (there exists $c,d\in\mathbb{R}^+$ and $n_0\in\mathbb{N}$ such that $d\cdot g(n)\leq f(n)\leq c\cdot g(n)$ for all $n\geq n_0$.) </li>
+    			<li> $f\in o(g)$ if $\lim_{n\to\infty}f(n)/g(n)=0$. <br>
+				Equivalently, for all $c\in \R^+$ there exists $n_0\in\mathbb{N}$ such that for all $n\geq n_0$, $f(n)<c\cdot g(n)$. </li>	
+		</ul>
+	</p>
+		
+	
 	   	
 	
     
